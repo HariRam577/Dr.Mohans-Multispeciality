@@ -1,0 +1,6 @@
+{
+  "name": "Dr. Mohan's Multispeciality Healthcare & Diabetes Centre",
+  "description": "Comprehensive multispeciality healthcare institution combining specialist diabetes expertise with cardiology, gastroenterology, ophthalmology, nephrology, neurology, vascular surgery, podiatry, and advanced diagnostics across 50+ centres.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
