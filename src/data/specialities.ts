@@ -35,10 +35,10 @@ export const SPECIALITIES: Speciality[] = [
     summary:
       'Comprehensive evaluation and personalized longitudinal care for Type 1, Type 2, gestational diabetes, thyroid disorders, and complex metabolic syndromes.',
     introduction:
-      'Founded in 1991, our Diabetes & Endocrinology department brings together internationally recognized diabetologists, endocrinologists, diabetes educators, and clinical researchers. Rather than focusing on blood glucose readings in isolation, our teams coordinate lipid, blood pressure, thyroid, and organ-protective protocols under one roof.',
+      'Founded in 1991, our Diabetes & Endocrinology department brings together internationally recognized diabetologists, endocrinologists, diabetes educators, and clinical specialists. Rather than focusing on blood glucose readings in isolation, our teams coordinate lipid, blood pressure, thyroid, and organ-protective protocols under one roof.',
     heroImage: MEDIA.diabetesConsult,
     imageAlt: 'Endocrinologist reviewing continuous glucose and metabolic trends with a patient',
-    accentHex: '#174A80',
+    accentHex: '#1B3B8B',
     conditionsTreated: [
       'Type 1 and Type 2 Diabetes Mellitus',
       'Gestational Diabetes & Pre-Conception Metabolic Care',
@@ -87,7 +87,7 @@ export const SPECIALITIES: Speciality[] = [
       'Metabolic health and cardiovascular performance are inseparable. Our Cardiology & Cardiac Care services provide early detection of silent myocardial ischemia, hypertensive heart disease, and lipid-driven arterial risk through modern non-invasive diagnostics and coordinated cardiologist consultations.',
     heroImage: MEDIA.cardiologySuite,
     imageAlt: 'Cardiology specialist conducting an echocardiography heart scan in a diagnostic suite',
-    accentHex: '#3C76C1',
+    accentHex: '#254EDB',
     conditionsTreated: [
       'Coronary Artery Risk & Silent Myocardial Ischemia',
       'Resistant & Essential Hypertension',
@@ -136,7 +136,7 @@ export const SPECIALITIES: Speciality[] = [
       'Our Gastroenterology & Surgical Care wing addresses the full spectrum of digestive, hepatic, and gastrointestinal conditions—from non-invasive fatty liver staging and diagnostic endoscopy to safely coordinated laparoscopic gallbladder, hernia, and metabolic surgeries.',
     heroImage: MEDIA.gastroEndoscopy,
     imageAlt: 'Modern gastroenterology endoscopy suite with medical imaging tower and specialist team',
-    accentHex: '#1F5A96',
+    accentHex: '#1B3B8B',
     conditionsTreated: [
       'Metabolic Dysfunction-Associated Steatotic Liver Disease (Fatty Liver)',
       'Gastroesophageal Reflux Disease (GERD) & Peptic Ulcers',
@@ -185,7 +185,7 @@ export const SPECIALITIES: Speciality[] = [
       'Vision preservation has been a cornerstone of Dr. Mohan’s since our founding alongside pioneering retinal specialists. Our Ophthalmology units combine dilated fundoscopy, digital fundus photography, and surgical cataract pathways to safeguard eyesight before symptoms appear.',
     heroImage: MEDIA.eyeOphthalmology,
     imageAlt: 'Ophthalmologist examining a patient with a slit-lamp biomicroscope and digital retinal monitor',
-    accentHex: '#285F9E',
+    accentHex: '#C89B2B',
     conditionsTreated: [
       'Non-Proliferative & Proliferative Diabetic Retinopathy',
       'Diabetic Macular Edema',
@@ -233,7 +233,7 @@ export const SPECIALITIES: Speciality[] = [
       'Diabetic foot complications require rapid, specialized intervention. Our dedicated Foot Care units bring together foot surgeons, podiatrists, wound-care nurses, and orthotic specialists to heal chronic ulcers, treat neuropathy-related pressure points, and preserve mobility.',
     heroImage: MEDIA.footVascular,
     imageAlt: 'Specialist clinician performing lower-limb vascular and diabetic foot diagnostic evaluation',
-    accentHex: '#174A80',
+    accentHex: '#1B3B8B',
     conditionsTreated: [
       'Neuropathic & Neuro-Ischemic Foot Ulcers',
       'Cellulitis & Deep Foot Space Infections',
@@ -276,7 +276,7 @@ export const SPECIALITIES: Speciality[] = [
       'Preventing ulceration begins long before skin breakdown occurs. Our Podiatry specialists analyze standing and walking plantar pressures, address structural deformities such as bunions or hammertoes, and craft custom-molded orthotics tailored to your daily footwear.',
     heroImage: MEDIA.podiatryBiomechanics,
     imageAlt: 'Podiatry specialist assessing ankle range of motion and plantar pressure biomechanics',
-    accentHex: '#3C76C1',
+    accentHex: '#9A6B11',
     conditionsTreated: [
       'Abnormal Plantar Pressure & Gait Imbalance',
       'Recurrent Callosities & Fissured Heels',
@@ -317,7 +317,7 @@ export const SPECIALITIES: Speciality[] = [
       'Kidney function can decline silently over years without noticeable symptoms. Our Nephrology & Kidney Care teams intervene at the earliest stage of albumin leakage or eGFR change, utilizing renal-protective therapies, tailored renal nutrition, and serene dialysis units where needed.',
     heroImage: MEDIA.nephrologyRenal,
     imageAlt: 'Nephrology specialist holding an anatomical kidney model during patient education',
-    accentHex: '#1E548C',
+    accentHex: '#112866',
     conditionsTreated: [
       'Diabetic Nephropathy & Albuminuria',
       'Chronic Kidney Disease (Stages 1–5)',
@@ -360,7 +360,7 @@ export const SPECIALITIES: Speciality[] = [
       'Peripheral and autonomic nerve health directly shape daily comfort, sleep, and mobility. Our Neurology specialists evaluate sensory-motor nerve conduction, manage painful diabetic neuropathy, and screen for cerebrovascular and autonomic complications through integrated neurological care.',
     heroImage: MEDIA.neurologyConsult,
     imageAlt: 'Clinician performing lower-limb neurological reflex and sensory mobility assessment',
-    accentHex: '#2B5B94',
+    accentHex: '#254EDB',
     conditionsTreated: [
       'Peripheral Sensorimotor Neuropathy',
       'Painful Neuropathy & Burning Feet Syndrome',
@@ -402,7 +402,7 @@ export const SPECIALITIES: Speciality[] = [
       'Healthy arterial blood flow is essential for tissue healing and mobility. Our Vascular specialists collaborate closely with Foot Care and Cardiology teams to diagnose peripheral arterial disease (PAD) early using duplex ultrasound and guide timely endovascular or surgical revascularization.',
     heroImage: MEDIA.cardiologyCare,
     imageAlt: 'Clinical nurse and specialist monitoring blood pressure and peripheral circulation in inpatient bay',
-    accentHex: '#174A80',
+    accentHex: '#1B3B8B',
     conditionsTreated: [
       'Peripheral Arterial Disease (PAD) & Claudication',
       'Critical Limb Ischemia & Non-Healing Wounds',
@@ -443,7 +443,7 @@ export const SPECIALITIES: Speciality[] = [
       'Our General & Internal Medicine physicians serve as the clinical anchor for adults and families—addressing everyday medical concerns, fever and respiratory infections, preventive adult immunization, and complex multi-system conditions that benefit from unified oversight.',
     heroImage: MEDIA.generalMedicine,
     imageAlt: 'Internal medicine specialist consulting warmly with an adult patient',
-    accentHex: '#3C76C1',
+    accentHex: '#254EDB',
     conditionsTreated: [
       'Hypertension, Dyslipidemia & Multi-System Chronic Care',
       'Acute Fevers, Respiratory & Urinary Tract Infections',
@@ -483,10 +483,10 @@ export const SPECIALITIES: Speciality[] = [
     summary:
       'Personalized meal plans tailored to regional Indian cuisines, glycemic index science, weight management, gestational health, and kidney-safe nutrition.',
     introduction:
-      'Sustainable nutrition respects both clinical science and family food traditions. Backed by MDRF’s landmark research on Indian dietary patterns, millets, and carbohydrate quality, our clinical dietitians build practical, sustainable nutrition plans for every life stage.',
+      'Sustainable nutrition respects both clinical science and family food traditions. Backed by decades of clinical evidence on Indian dietary patterns, millets, and carbohydrate quality, our clinical dietitians build practical, sustainable nutrition plans for every life stage.',
     heroImage: MEDIA.nutritionDiet,
     imageAlt: 'Portioned whole-food nutrition meal plan with fresh vegetables and dietary guidance',
-    accentHex: '#25609B',
+    accentHex: '#C89B2B',
     conditionsTreated: [
       'Type 1, Type 2 & Gestational Diabetes Nutrition',
       'Medical Weight Management & Obesity',
@@ -527,7 +527,7 @@ export const SPECIALITIES: Speciality[] = [
       'Accurate diagnosis underpins every safe clinical decision. Our accredited central and regional laboratories operate under rigorous internal and external quality controls, delivering standardized biochemistry, endocrinology assays, microbiology, and bedside diagnostic imaging with rapid digital reporting.',
     heroImage: MEDIA.diagnosticsLab,
     imageAlt: 'Accredited clinical biochemistry and molecular diagnostics laboratory with automated analyzers',
-    accentHex: '#174A80',
+    accentHex: '#1B3B8B',
     conditionsTreated: [
       'Comprehensive Metabolic & Endocrine Biomarker Profiling',
       'Cardiovascular & Lipid Risk Panels',

@@ -11,7 +11,6 @@ import { getSpecialityBySlug } from './data/specialities';
 import { CentresPage } from './pages/CentresPage';
 import { DoctorsPage } from './pages/DoctorsPage';
 import { HomePage } from './pages/HomePage';
-import { ResearchPage } from './pages/ResearchPage';
 import { SpecialitiesPage } from './pages/SpecialitiesPage';
 import { SpecialityDetailPage } from './pages/SpecialityDetailPage';
 
@@ -24,7 +23,6 @@ function parseHashToRoute(): AppRoute {
   if (hash === '/specialities') return { page: 'specialities' };
   if (hash === '/doctors') return { page: 'doctors' };
   if (hash === '/centres') return { page: 'centres' };
-  if (hash === '/research') return { page: 'research' };
   return { page: 'home' };
 }
 
@@ -38,8 +36,6 @@ function routeToHash(route: AppRoute): string {
       return '#/doctors';
     case 'centres':
       return '#/centres';
-    case 'research':
-      return '#/research';
     default:
       return '#/';
   }
@@ -73,8 +69,6 @@ export default function App() {
       document.title = "Find a Specialist Doctor | Dr. Mohan's";
     } else if (route.page === 'centres') {
       document.title = "Find a Centre (50+ Locations) | Dr. Mohan's";
-    } else if (route.page === 'research') {
-      document.title = "Research & MDRF Innovation | Dr. Mohan's";
     } else {
       document.title = "Dr. Mohan's | Multispeciality Healthcare & Diabetes Specialities Centre";
     }
@@ -99,7 +93,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen flex flex-col bg-white text-[#172B45]">
+      <div className="min-h-screen flex flex-col bg-white text-[#0F1F4B]">
         <Navbar
           currentRoute={route}
           onNavigate={navigate}
@@ -146,10 +140,6 @@ export default function App() {
               )}
 
               {route.page === 'centres' && <CentresPage onOpenBooking={openBooking} />}
-
-              {route.page === 'research' && (
-                <ResearchPage onNavigate={navigate} onOpenBooking={() => openBooking()} />
-              )}
             </motion.div>
           </AnimatePresence>
         </main>

@@ -14,7 +14,6 @@ export const MEDIA = {
   nutritionDiet: '/images/real/nutrition-plate.jpg',
   diagnosticsLab: '/images/real/diagnostics-vials.jpg',
   diagnosticsMicroscope: '/images/real/diagnostics-microscope.png',
-  mdrfCampus: '/images/real/mdrf-campus.jpg',
   brandLogo: '/images/real/logo-drmohans.png',
 } as const;
 

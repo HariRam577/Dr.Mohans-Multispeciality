@@ -2,14 +2,19 @@
 
 @layer base {
   :root {
-    --brand-blue: #3C76C1;
-    --brand-navy: #174A80;
-    --brand-soft: #EAF3FC;
-    --surface-offwhite: #F7F9FC;
+    --brand-royal: #1B3B8B;
+    --brand-royal-vibrant: #254EDB;
+    --brand-royal-dark: #112866;
+    --brand-gold: #C89B2B;
+    --brand-gold-text: #9A6B11;
+    --brand-gold-luminous: #E8C463;
+    --brand-gold-soft: #FBF6E8;
+    --brand-soft: #EEF3FC;
+    --surface-offwhite: #F8FAFD;
     --surface-white: #FFFFFF;
-    --ink-primary: #172B45;
-    --ink-secondary: #64748B;
-    --hairline: rgba(23, 43, 69, 0.09);
+    --ink-primary: #0F1F4B;
+    --ink-secondary: #55627A;
+    --hairline: rgba(15, 31, 75, 0.09);
   }
 
   html {
@@ -34,7 +39,7 @@
   }
 
   *:focus-visible {
-    outline: 2px solid #3C76C1;
+    outline: 2px solid #C89B2B;
     outline-offset: 2px;
   }
 }

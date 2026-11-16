@@ -101,7 +101,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#172B45]/45 backdrop-blur-[2px]"
+            className="fixed inset-0 bg-[#0F1F4B]/50 backdrop-blur-[2px]"
           />
 
           <motion.div
@@ -109,17 +109,17 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="relative z-10 w-full max-w-[520px] bg-white h-full overflow-y-auto shadow-2xl flex flex-col"
+            className="relative z-10 w-full max-w-[520px] bg-white h-full overflow-y-auto shadow-2xl flex flex-col border-l-2 border-[#C89B2B]/40"
           >
-            <div className="px-6 py-5 border-b border-[#172B45]/10 flex items-center justify-between sticky top-0 bg-white z-10">
+            <div className="px-6 py-5 border-b border-[#C89B2B]/25 flex items-center justify-between sticky top-0 bg-white z-10">
               <div>
                 <h2
                   id="booking-drawer-title"
-                  className="font-display text-xl font-bold text-[#172B45]"
+                  className="font-display text-xl font-bold text-[#0F1F4B]"
                 >
                   Request an Appointment
                 </h2>
-                <p className="text-xs text-[#64748B] mt-0.5">
+                <p className="text-xs text-[#55627A] mt-0.5">
                   Outpatient specialist consultation &amp; diagnostic scheduling
                 </p>
               </div>
@@ -127,7 +127,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                 type="button"
                 aria-label="Close appointment drawer"
                 onClick={onClose}
-                className="w-10 h-10 rounded-lg border border-[#172B45]/15 flex items-center justify-center text-[#172B45] hover:bg-[#F7F9FC] cursor-pointer"
+                className="w-10 h-10 rounded-lg border border-[#0F1F4B]/15 flex items-center justify-center text-[#0F1F4B] hover:bg-[#FBF6E8] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -135,49 +135,49 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
 
             <div className="p-6 flex-1">
               {confirmationRef ? (
-                <div className="bg-[#F7F9FC] border border-[#172B45]/10 rounded-xl p-6 space-y-5">
+                <div className="bg-[#F8FAFD] border border-[#C89B2B]/35 rounded-xl p-6 space-y-5">
                   <div className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-[#174A80] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-6 h-6 text-[#9A6B11] shrink-0 mt-0.5" />
                     <div>
-                      <p className="text-xs font-semibold text-[#3C76C1]">
+                      <p className="text-xs font-semibold text-[#9A6B11]">
                         Appointment Request Logged
                       </p>
-                      <h3 className="font-display text-xl font-bold text-[#172B45] mt-0.5">
+                      <h3 className="font-display text-xl font-bold text-[#0F1F4B] mt-0.5">
                         Reference {confirmationRef}
                       </h3>
                     </div>
                   </div>
 
-                  <p className="text-sm text-[#172B45]/85 leading-relaxed">
+                  <p className="text-sm text-[#0F1F4B]/85 leading-relaxed">
                     Thank you, <span className="font-semibold">{form.patientName}</span>. Our
                     central patient coordination desk will confirm your exact consultation slot via{' '}
                     <span className="font-semibold tabular-nums">{form.phone}</span> shortly.
                   </p>
 
-                  <dl className="border-t border-[#172B45]/10 pt-4 space-y-2.5 text-sm">
+                  <dl className="border-t border-[#0F1F4B]/10 pt-4 space-y-2.5 text-sm">
                     <div className="flex justify-between gap-4">
-                      <dt className="text-[#64748B]">Department</dt>
-                      <dd className="font-semibold text-[#172B45] text-right">
+                      <dt className="text-[#55627A]">Department</dt>
+                      <dd className="font-semibold text-[#0F1F4B] text-right">
                         {selectedSpeciality?.name}
                       </dd>
                     </div>
                     {selectedDoctor && (
                       <div className="flex justify-between gap-4">
-                        <dt className="text-[#64748B]">Requested Specialist</dt>
-                        <dd className="font-semibold text-[#172B45] text-right">
+                        <dt className="text-[#55627A]">Requested Specialist</dt>
+                        <dd className="font-semibold text-[#0F1F4B] text-right">
                           {selectedDoctor.name}
                         </dd>
                       </div>
                     )}
                     <div className="flex justify-between gap-4">
-                      <dt className="text-[#64748B]">Centre</dt>
-                      <dd className="font-semibold text-[#172B45] text-right">
+                      <dt className="text-[#55627A]">Centre</dt>
+                      <dd className="font-semibold text-[#0F1F4B] text-right">
                         {selectedCentre?.name}
                       </dd>
                     </div>
                     <div className="flex justify-between gap-4">
-                      <dt className="text-[#64748B]">Preferred Date &amp; Time</dt>
-                      <dd className="font-semibold text-[#172B45] text-right tabular-nums">
+                      <dt className="text-[#55627A]">Preferred Date &amp; Time</dt>
+                      <dd className="font-semibold text-[#0F1F4B] text-right tabular-nums">
                         {form.preferredDate} · {form.preferredSlot}
                       </dd>
                     </div>
@@ -187,14 +187,14 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                     <button
                       type="button"
                       onClick={() => setConfirmationRef(null)}
-                      className="flex-1 py-2.5 px-4 text-sm font-semibold text-[#174A80] bg-[#EAF3FC] hover:bg-[#dbeaf9] rounded-lg transition-colors cursor-pointer"
+                      className="flex-1 py-2.5 px-4 text-sm font-semibold text-[#1B3B8B] bg-[#FBF6E8] hover:bg-[#F5EBD0] border border-[#C89B2B]/40 rounded-lg transition-colors cursor-pointer"
                     >
                       Book Another Visit
                     </button>
                     <button
                       type="button"
                       onClick={onClose}
-                      className="flex-1 py-2.5 px-4 text-sm font-semibold text-white bg-[#174A80] hover:bg-[#3C76C1] rounded-lg transition-colors cursor-pointer"
+                      className="flex-1 py-2.5 px-4 text-sm font-semibold text-white bg-[#1B3B8B] hover:bg-[#254EDB] rounded-lg transition-colors cursor-pointer"
                     >
                       Done
                     </button>
@@ -205,7 +205,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                   <div>
                     <label
                       htmlFor="drawer-patient-name"
-                      className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                      className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                     >
                       Patient Full Name *
                     </label>
@@ -215,7 +215,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                       value={form.patientName}
                       onChange={(e) => setForm({ ...form, patientName: e.target.value })}
                       placeholder="e.g., Ramesh Narayanan"
-                      className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                      className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                     />
                     {errors.patientName && (
                       <p className="text-xs text-red-700 mt-1">{errors.patientName}</p>
@@ -226,7 +226,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                     <div>
                       <label
                         htmlFor="drawer-phone"
-                        className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                        className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                       >
                         Mobile Number *
                       </label>
@@ -236,7 +236,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
                         placeholder="+91 98400 00000"
-                        className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                        className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                       />
                       {errors.phone && (
                         <p className="text-xs text-red-700 mt-1">{errors.phone}</p>
@@ -246,7 +246,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                     <div>
                       <label
                         htmlFor="drawer-email"
-                        className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                        className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                       >
                         Email (Optional)
                       </label>
@@ -256,7 +256,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
                         placeholder="name@example.com"
-                        className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                        className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                       />
                       {errors.email && (
                         <p className="text-xs text-red-700 mt-1">{errors.email}</p>
@@ -267,7 +267,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                   <div>
                     <label
                       htmlFor="drawer-speciality"
-                      className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                      className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                     >
                       Clinical Speciality *
                     </label>
@@ -278,7 +278,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                         setForm({ ...form, specialitySlug: e.target.value });
                         setSelectedDoctorId('');
                       }}
-                      className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                      className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                     >
                       {SPECIALITIES.map((spec) => (
                         <option key={spec.slug} value={spec.slug}>
@@ -291,7 +291,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                   <div>
                     <label
                       htmlFor="drawer-centre"
-                      className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                      className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                     >
                       Preferred Centre *
                     </label>
@@ -299,7 +299,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                       id="drawer-centre"
                       value={form.centreId}
                       onChange={(e) => setForm({ ...form, centreId: e.target.value })}
-                      className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                      className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                     >
                       {CENTRES.map((centre) => (
                         <option key={centre.id} value={centre.id}>
@@ -313,7 +313,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                     <div>
                       <label
                         htmlFor="drawer-doctor"
-                        className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                        className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                       >
                         Preferred Specialist (Optional)
                       </label>
@@ -321,7 +321,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                         id="drawer-doctor"
                         value={selectedDoctorId}
                         onChange={(e) => setSelectedDoctorId(e.target.value)}
-                        className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                        className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                       >
                         <option value="">First Available Specialist</option>
                         {matchingDoctors.map((doc) => (
@@ -337,7 +337,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                     <div>
                       <label
                         htmlFor="drawer-date"
-                        className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                        className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                       >
                         Preferred Date *
                       </label>
@@ -346,7 +346,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                         type="date"
                         value={form.preferredDate}
                         onChange={(e) => setForm({ ...form, preferredDate: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                        className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                       />
                       {errors.preferredDate && (
                         <p className="text-xs text-red-700 mt-1">{errors.preferredDate}</p>
@@ -356,7 +356,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                     <div>
                       <label
                         htmlFor="drawer-slot"
-                        className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                        className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                       >
                         Preferred Window
                       </label>
@@ -364,7 +364,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                         id="drawer-slot"
                         value={form.preferredSlot}
                         onChange={(e) => setForm({ ...form, preferredSlot: e.target.value })}
-                        className="w-full px-3.5 py-2.5 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                        className="w-full px-3.5 py-2.5 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                       >
                         {TIME_SLOTS.map((slot) => (
                           <option key={slot} value={slot}>
@@ -378,7 +378,7 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                   <div>
                     <label
                       htmlFor="drawer-notes"
-                      className="block text-xs font-semibold text-[#172B45] mb-1.5"
+                      className="block text-xs font-semibold text-[#0F1F4B] mb-1.5"
                     >
                       Clinical Notes or Symptoms (Optional)
                     </label>
@@ -388,40 +388,40 @@ export function AppointmentDrawer({ open, prefill, onClose }: AppointmentDrawerP
                       value={form.notes}
                       onChange={(e) => setForm({ ...form, notes: e.target.value })}
                       placeholder="Brief note for our triage coordinator..."
-                      className="w-full px-3.5 py-2 text-sm border border-[#172B45]/20 rounded-lg bg-white text-[#172B45]"
+                      className="w-full px-3.5 py-2 text-sm border border-[#0F1F4B]/20 rounded-lg bg-white text-[#0F1F4B]"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3 px-5 text-sm font-semibold text-white bg-[#174A80] hover:bg-[#3C76C1] rounded-lg transition-colors inline-flex items-center justify-center gap-2 cursor-pointer"
+                    className="w-full py-3 px-5 text-sm font-semibold text-white bg-[#1B3B8B] hover:bg-[#254EDB] border border-[#D4AF37]/40 rounded-lg transition-colors inline-flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    <Calendar className="w-4 h-4" aria-hidden="true" />
+                    <Calendar className="w-4 h-4 text-[#E8C463]" aria-hidden="true" />
                     <span>Confirm Appointment Request</span>
                   </button>
                 </form>
               )}
 
               {/* Direct Phone & WhatsApp Patient Access */}
-              <div className="mt-6 pt-5 border-t border-[#172B45]/10 space-y-2.5">
-                <p className="text-xs font-semibold text-[#64748B]">
+              <div className="mt-6 pt-5 border-t border-[#0F1F4B]/10 space-y-2.5">
+                <p className="text-xs font-semibold text-[#55627A]">
                   Prefer direct assistance?
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   <a
                     href="tel:+914443968888"
-                    className="inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg border border-[#172B45]/15 text-xs font-semibold text-[#172B45] hover:bg-[#F7F9FC] transition-colors"
+                    className="inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg border border-[#0F1F4B]/15 text-xs font-semibold text-[#0F1F4B] hover:bg-[#F8FAFD] transition-colors"
                   >
-                    <Phone className="w-3.5 h-3.5 text-[#3C76C1]" aria-hidden="true" />
+                    <Phone className="w-3.5 h-3.5 text-[#1B3B8B]" aria-hidden="true" />
                     <span>Call 044-43968888</span>
                   </a>
                   <a
                     href="https://wa.me/919384848888?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-[#EAF3FC] text-xs font-semibold text-[#174A80] hover:bg-[#dbeaf9] transition-colors"
+                    className="inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-[#FBF6E8] border border-[#C89B2B]/40 text-xs font-semibold text-[#1B3B8B] hover:bg-[#F5EBD0] transition-colors"
                   >
-                    <MessageCircle className="w-3.5 h-3.5" aria-hidden="true" />
+                    <MessageCircle className="w-3.5 h-3.5 text-[#9A6B11]" aria-hidden="true" />
                     <span>WhatsApp Desk</span>
                   </a>
                 </div>

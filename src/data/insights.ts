@@ -29,11 +29,11 @@ export const INSTITUTIONAL_STATS: InstitutionalStat[] = [
     context: 'From endocrinology and cardiology to gastro, eye, and renal care',
   },
   {
-    value: '1,700+',
-    numericTarget: 1700,
+    value: '30+',
+    numericTarget: 30,
     suffix: '+',
-    label: 'Peer-Reviewed Papers',
-    context: 'Published with Madras Diabetes Research Foundation (MDRF)',
+    label: 'Cities Across India',
+    context: 'Specialist clinics and diagnostic centres spanning 8 states & union territories',
   },
 ];
 
@@ -72,41 +72,6 @@ export const CARE_PATHWAY: CarePathwayStep[] = [
     description:
       'Culturally adapted medical nutrition therapy, digital report tracking, and home blood sample collection keep care effortless for families.',
     outcome: 'Sustained day-to-day confidence and continuity',
-  },
-];
-
-export interface ResearchInitiative {
-  id: string;
-  kicker: string;
-  title: string;
-  summary: string;
-  impact: string;
-}
-
-export const RESEARCH_INITIATIVES: ResearchInitiative[] = [
-  {
-    id: 'icmr-indiab',
-    kicker: 'National Epidemiology',
-    title: 'ICMR–INDIAB National Study',
-    summary:
-      'Spearheaded by MDRF in collaboration with the Indian Council of Medical Research, mapping diabetes, pre-diabetes, hypertension, and dyslipidemia prevalence across all Indian states and union territories.',
-    impact: 'Informs national public health guidelines and early regional screening protocols.',
-  },
-  {
-    id: 'mdrf-genetics',
-    kicker: 'Precision Medicine',
-    title: 'Genetics & Phenotyping of Young-Onset Diabetes',
-    summary:
-      'Translational research identifying monogenic diabetes (MODY) subtypes and distinct Indian metabolic phenotypes, enabling personalized oral therapy instead of unnecessary insulin where clinically indicated.',
-    impact: 'Recognized by the ICMR Centre for Advanced Research on Diabetes.',
-  },
-  {
-    id: 'nutritional-science',
-    kicker: 'Clinical Nutrition Science',
-    title: 'Glycemic Index & Millet Clinical Trials',
-    summary:
-      'Randomized clinical studies evaluating traditional millets, unpolished grains, and South Asian dietary patterns to establish culturally familiar, evidence-backed meal protocols.',
-    impact: 'Directly powers our clinical dietetics consultations across all 50+ centres.',
   },
 ];
 
@@ -255,7 +220,7 @@ export const MEDICAL_ARTICLES: MedicalArticle[] = [
     title: 'uACR and eGFR Explained: Two Essential Tests for Lifelong Kidney Health',
     readTime: '4 min read',
     publishedDate: 'July 2026',
-    reviewedBy: 'Dr. V. Mohan & MDRF Clinical Editorial Board',
+    reviewedBy: 'Dr. V. Mohan & Clinical Editorial Board',
     excerpt:
       'Why serum creatinine alone misses early renal stress, and how combining urine albumin checks with blood pressure control preserves kidney function.',
     image: MEDIA.nephrologyRenal,
