@@ -274,8 +274,8 @@ export const SPECIALITIES: Speciality[] = [
       'Clinical podiatry focused on lower-limb biomechanics, plantar pressure redistribution, medical-grade pedicure care, and customized insoles.',
     introduction:
       'Preventing ulceration begins long before skin breakdown occurs. Our Podiatry specialists analyze standing and walking plantar pressures, address structural deformities such as bunions or hammertoes, and craft custom-molded orthotics tailored to your daily footwear.',
-    heroImage: MEDIA.footVascular,
-    imageAlt: 'Podiatry and lower extremity biomechanical assessment room',
+    heroImage: MEDIA.podiatryBiomechanics,
+    imageAlt: 'Podiatry specialist assessing ankle range of motion and plantar pressure biomechanics',
     accentHex: '#3C76C1',
     conditionsTreated: [
       'Abnormal Plantar Pressure & Gait Imbalance',
@@ -316,7 +316,7 @@ export const SPECIALITIES: Speciality[] = [
     introduction:
       'Kidney function can decline silently over years without noticeable symptoms. Our Nephrology & Kidney Care teams intervene at the earliest stage of albumin leakage or eGFR change, utilizing renal-protective therapies, tailored renal nutrition, and serene dialysis units where needed.',
     heroImage: MEDIA.nephrologyRenal,
-    imageAlt: 'Bright, tranquil nephrology and outpatient dialysis care bay with natural daylight',
+    imageAlt: 'Nephrology specialist holding an anatomical kidney model during patient education',
     accentHex: '#1E548C',
     conditionsTreated: [
       'Diabetic Nephropathy & Albuminuria',
@@ -359,7 +359,7 @@ export const SPECIALITIES: Speciality[] = [
     introduction:
       'Peripheral and autonomic nerve health directly shape daily comfort, sleep, and mobility. Our Neurology specialists evaluate sensory-motor nerve conduction, manage painful diabetic neuropathy, and screen for cerebrovascular and autonomic complications through integrated neurological care.',
     heroImage: MEDIA.neurologyConsult,
-    imageAlt: 'Neurology specialist reviewing neuroimaging and nerve electrophysiology studies',
+    imageAlt: 'Clinician performing lower-limb neurological reflex and sensory mobility assessment',
     accentHex: '#2B5B94',
     conditionsTreated: [
       'Peripheral Sensorimotor Neuropathy',
@@ -400,8 +400,8 @@ export const SPECIALITIES: Speciality[] = [
       'Specialist vascular evaluation for leg claudication, non-healing ischemic wounds, varicose veins, and peripheral arterial circulation.',
     introduction:
       'Healthy arterial blood flow is essential for tissue healing and mobility. Our Vascular specialists collaborate closely with Foot Care and Cardiology teams to diagnose peripheral arterial disease (PAD) early using duplex ultrasound and guide timely endovascular or surgical revascularization.',
-    heroImage: MEDIA.footVascular,
-    imageAlt: 'Vascular clinician performing color duplex Doppler ultrasound on the lower extremity',
+    heroImage: MEDIA.cardiologyCare,
+    imageAlt: 'Clinical nurse and specialist monitoring blood pressure and peripheral circulation in inpatient bay',
     accentHex: '#174A80',
     conditionsTreated: [
       'Peripheral Arterial Disease (PAD) & Claudication',
@@ -441,8 +441,8 @@ export const SPECIALITIES: Speciality[] = [
       'Holistic adult physician consultations managing acute illnesses, hypertension, infections, preventive health evaluations, and multi-morbidity care.',
     introduction:
       'Our General & Internal Medicine physicians serve as the clinical anchor for adults and families—addressing everyday medical concerns, fever and respiratory infections, preventive adult immunization, and complex multi-system conditions that benefit from unified oversight.',
-    heroImage: MEDIA.diabetesConsult,
-    imageAlt: 'Senior internal medicine consultant discussing preventive health plan with a patient',
+    heroImage: MEDIA.generalMedicine,
+    imageAlt: 'Internal medicine specialist consulting warmly with an adult patient',
     accentHex: '#3C76C1',
     conditionsTreated: [
       'Hypertension, Dyslipidemia & Multi-System Chronic Care',
@@ -484,8 +484,8 @@ export const SPECIALITIES: Speciality[] = [
       'Personalized meal plans tailored to regional Indian cuisines, glycemic index science, weight management, gestational health, and kidney-safe nutrition.',
     introduction:
       'Sustainable nutrition respects both clinical science and family food traditions. Backed by MDRF’s landmark research on Indian dietary patterns, millets, and carbohydrate quality, our clinical dietitians build practical, sustainable nutrition plans for every life stage.',
-    heroImage: MEDIA.diabetesConsult,
-    imageAlt: 'Clinical nutritionist consulting with a patient on evidence-based dietary planning',
+    heroImage: MEDIA.nutritionDiet,
+    imageAlt: 'Portioned whole-food nutrition meal plan with fresh vegetables and dietary guidance',
     accentHex: '#25609B',
     conditionsTreated: [
       'Type 1, Type 2 & Gestational Diabetes Nutrition',

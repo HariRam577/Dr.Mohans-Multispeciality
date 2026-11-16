@@ -29,8 +29,8 @@ export function ResearchPage({ onNavigate, onOpenBooking }: ResearchPageProps) {
           </div>
           <div className="lg:col-span-5 rounded-2xl overflow-hidden aspect-[4/3]">
             <ClinicalImage
-              src={MEDIA.diagnosticsLab}
-              alt="Clinical biochemistry and molecular research laboratories"
+              src={MEDIA.mdrfCampus}
+              alt="Madras Diabetes Research Foundation (MDRF) campus building in Chennai"
               eager
               className="w-full h-full"
             />

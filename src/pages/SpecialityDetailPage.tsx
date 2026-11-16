@@ -173,7 +173,9 @@ export function SpecialityDetailPage({
           <div>
             <p className="text-xs font-semibold text-[#3C76C1]">Department Faculty</p>
             <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#172B45] mt-1">
-              {speciality.shortName} Specialists
+              {deptDoctors.length > 0
+                ? `${speciality.shortName} Specialists`
+                : `Coordinated ${speciality.shortName} & Clinical Faculty`}
             </h2>
           </div>
           <button
@@ -186,7 +188,7 @@ export function SpecialityDetailPage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(deptDoctors.length > 0 ? deptDoctors : DOCTORS.slice(0, 2)).map((doc) => (
+          {(deptDoctors.length > 0 ? deptDoctors : DOCTORS.slice(0, 3)).map((doc) => (
             <article
               key={doc.id}
               className="bg-white border border-[#172B45]/12 rounded-xl overflow-hidden flex flex-col justify-between"

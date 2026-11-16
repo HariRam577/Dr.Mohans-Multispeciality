@@ -198,11 +198,11 @@ export function HomePage({
               className="lg:col-span-6 relative rounded-2xl overflow-hidden min-h-[260px] sm:min-h-[340px] lg:min-h-[520px]"
             >
               <ClinicalImage
-                src={MEDIA.heroAtrium}
-                alt="Sunlit atrium of Dr. Mohan's Multispeciality Healthcare Centre"
+                src={MEDIA.heroClinical}
+                alt="Senior specialist physician at Dr. Mohan's Multispeciality Healthcare Centre"
                 eager
                 className="w-full h-full"
-                imgClassName="lg:h-full object-cover"
+                imgClassName="lg:h-full object-cover object-[72%_15%]"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#172B45]/85 via-[#172B45]/35 to-transparent p-6 sm:p-8 text-white">
                 <p className="text-xs font-medium text-[#EAF3FC]">
@@ -862,28 +862,38 @@ export function HomePage({
       <section className="bg-white py-16 lg:py-24 border-b border-[#172B45]/10">
         <div className="max-w-[1360px] mx-auto px-5 sm:px-8">
           <RevealSection>
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
-              <div className="max-w-2xl space-y-2.5">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center mb-12">
+              <div className="lg:col-span-7 space-y-3">
                 <p className="text-xs font-semibold text-[#3C76C1]">
                   Research &amp; Innovation · MDRF
                 </p>
                 <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#172B45] [text-wrap:balance]">
                   Translating Scientific Discovery Directly Into Patient Care
                 </h2>
-                <p className="text-[15px] text-[#64748B] leading-relaxed">
+                <p className="text-[15px] text-[#64748B] leading-relaxed max-w-2xl">
                   Founded in 1996, our sister institution—the Madras Diabetes Research Foundation
                   (MDRF)—is an ICMR Centre for Advanced Research conducting landmark national
                   studies.
                 </p>
+                <div className="pt-2">
+                  <button
+                    type="button"
+                    onClick={() => onNavigate({ page: 'research' })}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#174A80] hover:text-[#3C76C1] whitespace-nowrap shrink-0 cursor-pointer"
+                  >
+                    <span>Explore Research &amp; Publications</span>
+                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                  </button>
+                </div>
               </div>
-              <button
-                type="button"
-                onClick={() => onNavigate({ page: 'research' })}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-[#174A80] hover:text-[#3C76C1] whitespace-nowrap shrink-0 cursor-pointer"
-              >
-                <span>Explore Research &amp; Publications</span>
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </button>
+
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden aspect-[16/10] border border-[#172B45]/10">
+                <ClinicalImage
+                  src={MEDIA.mdrfCampus}
+                  alt="Madras Diabetes Research Foundation (MDRF) research campus"
+                  className="w-full h-full"
+                />
+              </div>
             </div>
           </RevealSection>
 

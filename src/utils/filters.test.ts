@@ -32,15 +32,15 @@ test('speciality filter matches category and search term across all 12 departmen
 });
 
 test('doctor filter filters accurately by speciality, city, and clinical focus', () => {
-  const chennaiCardio = filterDoctors(DOCTORS, {
-    specialitySlug: 'cardiology',
+  const chennaiEyeDocs = filterDoctors(DOCTORS, {
+    specialitySlug: 'eye-care',
     city: 'Chennai',
   });
-  assert.equal(chennaiCardio.length, 1);
-  assert.equal(chennaiCardio[0].name, 'Dr. Aravind Subramanian');
+  assert.equal(chennaiEyeDocs.length, 2);
+  assert.equal(chennaiEyeDocs[0].name, 'Dr. R. Rajalakshmi');
 
-  const bengaluruDocs = filterDoctors(DOCTORS, { city: 'Bengaluru' });
-  assert.equal(bengaluruDocs.length, 2);
+  const hyderabadDocs = filterDoctors(DOCTORS, { city: 'Hyderabad' });
+  assert.equal(hyderabadDocs.length, 2);
 
   const searchMody = filterDoctors(DOCTORS, { query: 'MODY' });
   assert.equal(searchMody.length, 1);

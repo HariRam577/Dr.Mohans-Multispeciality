@@ -186,10 +186,10 @@ export const MEDICAL_ARTICLES: MedicalArticle[] = [
     title: 'Why Preventive Cardiac Screening Matters Beyond Cholesterol Numbers',
     readTime: '4 min read',
     publishedDate: 'October 2026',
-    reviewedBy: 'Dr. Aravind Subramanian, DM (Cardiology)',
+    reviewedBy: 'Dr. Ranjit Unnikrishnan I, MD, FRCP',
     excerpt:
       'Understanding how blood pressure variability, non-HDL cholesterol, and 2D echocardiography work together to detect silent cardiovascular strain early.',
-    image: MEDIA.cardiologySuite,
+    image: MEDIA.cardiologyCare,
     sections: [
       {
         heading: 'Looking Past Standard Lipid Panels',
@@ -209,7 +209,7 @@ export const MEDICAL_ARTICLES: MedicalArticle[] = [
     title: 'Managing Fatty Liver (MASLD): Early Staging and Clinical Pathways',
     readTime: '5 min read',
     publishedDate: 'September 2026',
-    reviewedBy: 'Dr. Kavitha Rajesh, DM (Gastroenterology)',
+    reviewedBy: 'Dr. Aswin S Krishna, Consultant Hepatologist',
     excerpt:
       'Fatty liver is frequently silent in its early stages. Learn which liver fibrosis scores, ultrasound markers, and dietary adjustments protect long-term hepatic health.',
     image: MEDIA.gastroEndoscopy,
@@ -232,7 +232,7 @@ export const MEDICAL_ARTICLES: MedicalArticle[] = [
     title: 'Digital Retinal Imaging and OCT: Protecting Vision Before Symptoms Appear',
     readTime: '3 min read',
     publishedDate: 'August 2026',
-    reviewedBy: 'Dr. Meenakshi Sundaram, MS (Ophthalmology)',
+    reviewedBy: 'Dr. R. Rajalakshmi, Head – Medical Retina',
     excerpt:
       'How modern non-mydriatic fundus cameras and Optical Coherence Tomography detect microscopic retinal changes long before central vision blurs.',
     image: MEDIA.eyeOphthalmology,
@@ -255,7 +255,7 @@ export const MEDICAL_ARTICLES: MedicalArticle[] = [
     title: 'uACR and eGFR Explained: Two Essential Tests for Lifelong Kidney Health',
     readTime: '4 min read',
     publishedDate: 'July 2026',
-    reviewedBy: 'Dr. K. Narasimha Rao, DM (Nephrology)',
+    reviewedBy: 'Dr. V. Mohan & MDRF Clinical Editorial Board',
     excerpt:
       'Why serum creatinine alone misses early renal stress, and how combining urine albumin checks with blood pressure control preserves kidney function.',
     image: MEDIA.nephrologyRenal,
