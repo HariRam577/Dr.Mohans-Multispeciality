@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
-import { ArrowRight, X } from 'lucide-react';
+import { ArrowRight, BookOpen, X } from 'lucide-react';
 import type { MedicalArticle } from '../data/insights';
 import { ClinicalImage } from './ClinicalImage';
 
@@ -35,7 +35,7 @@ export function ArticleModal({ article, onClose, onExploreSpeciality }: ArticleM
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18 }}
             onClick={onClose}
-            className="fixed inset-0 bg-[#0F1F4B]/55 backdrop-blur-[2px]"
+            className="fixed inset-0 bg-[#102A5E]/65"
           />
 
           <motion.article
@@ -43,7 +43,7 @@ export function ArticleModal({ article, onClose, onExploreSpeciality }: ArticleM
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 12 }}
             transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            className="relative z-10 w-full max-w-[720px] bg-white border border-[#C89B2B]/35 rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
+            className="relative z-10 w-full max-w-[720px] bg-white border border-[#DCE7F1] rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
           >
             <ClinicalImage
               src={article.image}
@@ -54,8 +54,9 @@ export function ArticleModal({ article, onClose, onExploreSpeciality }: ArticleM
             <div className="p-6 sm:p-8 space-y-5">
               <div className="flex items-start justify-between gap-4">
                 <div className="space-y-1.5">
-                  <div className="flex flex-wrap items-center gap-2 text-xs text-[#55627A]">
-                    <span className="font-semibold text-[#9A6B11]">{article.category}</span>
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-[#64748B]">
+                    <BookOpen className="w-3.5 h-3.5 text-[#1769AA]" aria-hidden="true" />
+                    <span className="font-bold text-[#1769AA]">{article.category}</span>
                     <span aria-hidden="true">·</span>
                     <span>{article.publishedDate}</span>
                     <span aria-hidden="true">·</span>
@@ -63,42 +64,42 @@ export function ArticleModal({ article, onClose, onExploreSpeciality }: ArticleM
                   </div>
                   <h2
                     id="article-modal-title"
-                    className="font-display text-2xl sm:text-3xl font-bold text-[#0F1F4B] leading-tight"
+                    className="font-display text-2xl sm:text-3xl font-bold text-[#102A5E] leading-tight"
                   >
                     {article.title}
                   </h2>
-                  <p className="text-xs text-[#55627A]">Medically reviewed by {article.reviewedBy}</p>
+                  <p className="text-xs text-[#64748B]">Medically reviewed by {article.reviewedBy}</p>
                 </div>
 
                 <button
                   type="button"
                   aria-label="Close article"
                   onClick={onClose}
-                  className="w-10 h-10 rounded-lg border border-[#0F1F4B]/12 flex items-center justify-center text-[#0F1F4B] hover:bg-[#FBF6E8] shrink-0 cursor-pointer"
+                  className="w-10 h-10 rounded-xl bg-[#F7FAFD] border border-[#DCE7F1] text-[#102A5E] hover:bg-[#EAF5FC] flex items-center justify-center shrink-0 cursor-pointer transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <p className="text-base text-[#0F1F4B]/90 leading-relaxed font-medium">
+              <p className="text-base text-[#102A5E] leading-relaxed font-semibold bg-[#EAF5FC] p-4 rounded-xl border border-[#DCE7F1]">
                 {article.excerpt}
               </p>
 
-              <div className="space-y-5 pt-2 border-t border-[#0F1F4B]/10">
+              <div className="space-y-5 pt-2">
                 {article.sections.map((section) => (
                   <section key={section.heading} className="space-y-2">
-                    <h3 className="font-display text-lg font-bold text-[#0F1F4B]">
+                    <h3 className="font-display text-lg font-bold text-[#1769AA]">
                       {section.heading}
                     </h3>
-                    <p className="text-[15px] text-[#0F1F4B]/80 leading-relaxed">
+                    <p className="text-[15px] text-[#172B43]/90 leading-relaxed">
                       {section.body}
                     </p>
                   </section>
                 ))}
               </div>
 
-              <div className="pt-4 border-t border-[#0F1F4B]/10 flex flex-wrap items-center justify-between gap-4">
-                <span className="text-xs text-[#55627A]">
+              <div className="pt-4 border-t border-[#DCE7F1] flex flex-wrap items-center justify-between gap-4">
+                <span className="text-xs text-[#64748B]">
                   For personalized clinical guidance, consult a specialist.
                 </span>
                 <button
@@ -107,10 +108,10 @@ export function ArticleModal({ article, onClose, onExploreSpeciality }: ArticleM
                     onClose();
                     onExploreSpeciality(article.specialitySlug);
                   }}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-[#1B3B8B] hover:bg-[#254EDB] border border-[#D4AF37]/40 rounded-lg transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-bold text-white bg-[#1769AA] hover:bg-[#102A5E] rounded-xl transition-colors cursor-pointer"
                 >
                   <span>Explore {article.category} Department</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#E8C463]" aria-hidden="true" />
+                  <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
                 </button>
               </div>
             </div>

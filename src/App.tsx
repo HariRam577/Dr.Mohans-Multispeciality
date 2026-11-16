@@ -8,9 +8,12 @@ import { Navbar, type AppRoute } from './components/Navbar';
 import type { Doctor } from './data/doctors';
 import type { MedicalArticle } from './data/insights';
 import { getSpecialityBySlug } from './data/specialities';
+import { AboutPage } from './pages/AboutPage';
 import { CentresPage } from './pages/CentresPage';
 import { DoctorsPage } from './pages/DoctorsPage';
+import { EducationPage } from './pages/EducationPage';
 import { HomePage } from './pages/HomePage';
+import { ServicesPage } from './pages/ServicesPage';
 import { SpecialitiesPage } from './pages/SpecialitiesPage';
 import { SpecialityDetailPage } from './pages/SpecialityDetailPage';
 
@@ -22,7 +25,15 @@ function parseHashToRoute(): AppRoute {
   }
   if (hash === '/specialities') return { page: 'specialities' };
   if (hash === '/doctors') return { page: 'doctors' };
-  if (hash === '/centres') return { page: 'centres' };
+  if (hash.startsWith('/centres')) {
+    const [, queryPart] = hash.split('?');
+    const params = new URLSearchParams(queryPart ?? '');
+    const state = params.get('state') || undefined;
+    return { page: 'centres', stateFilter: state };
+  }
+  if (hash.startsWith('/services')) return { page: 'services' };
+  if (hash.startsWith('/education')) return { page: 'education' };
+  if (hash.startsWith('/about')) return { page: 'about' };
   return { page: 'home' };
 }
 
@@ -35,7 +46,15 @@ function routeToHash(route: AppRoute): string {
     case 'doctors':
       return '#/doctors';
     case 'centres':
-      return '#/centres';
+      return route.stateFilter && route.stateFilter !== 'all'
+        ? `#/centres?state=${encodeURIComponent(route.stateFilter)}`
+        : '#/centres';
+    case 'services':
+      return '#/services';
+    case 'education':
+      return '#/education';
+    case 'about':
+      return '#/about';
     default:
       return '#/';
   }
@@ -69,6 +88,12 @@ export default function App() {
       document.title = "Find a Specialist Doctor | Dr. Mohan's";
     } else if (route.page === 'centres') {
       document.title = "Find a Centre (50+ Locations) | Dr. Mohan's";
+    } else if (route.page === 'services') {
+      document.title = "Patient Care, Health Packages & Home Care | Dr. Mohan's";
+    } else if (route.page === 'education') {
+      document.title = "Clinical Education & Patient Insights | Dr. Mohan's";
+    } else if (route.page === 'about') {
+      document.title = "About Us, Leadership & Contact | Dr. Mohan's";
     } else {
       document.title = "Dr. Mohan's | Multispeciality Healthcare & Diabetes Specialities Centre";
     }
@@ -80,7 +105,14 @@ export default function App() {
       window.location.hash = nextHash;
     } else {
       setRoute(nextRoute);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (!nextRoute.section) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+    if (nextRoute.section) {
+      setTimeout(() => {
+        document.getElementById(nextRoute.section!)?.scrollIntoView({ behavior: 'smooth' });
+      }, 120);
     }
   };
 
@@ -89,11 +121,11 @@ export default function App() {
     setBookingOpen(true);
   };
 
-  const routeKey = `${route.page}-${route.slug ?? ''}`;
+  const routeKey = `${route.page}-${route.slug ?? ''}-${route.stateFilter ?? ''}`;
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen flex flex-col bg-white text-[#0F1F4B]">
+      <div className="min-h-screen flex flex-col bg-[#F7FAFD] text-[#172B43]">
         <Navbar
           currentRoute={route}
           onNavigate={navigate}
@@ -139,7 +171,27 @@ export default function App() {
                 />
               )}
 
-              {route.page === 'centres' && <CentresPage onOpenBooking={openBooking} />}
+              {route.page === 'centres' && (
+                <CentresPage
+                  initialState={route.stateFilter}
+                  onOpenBooking={openBooking}
+                />
+              )}
+
+              {route.page === 'services' && (
+                <ServicesPage onNavigate={navigate} onOpenBooking={openBooking} />
+              )}
+
+              {route.page === 'education' && (
+                <EducationPage
+                  onSelectArticle={setSelectedArticle}
+                  onOpenBooking={openBooking}
+                />
+              )}
+
+              {route.page === 'about' && (
+                <AboutPage onNavigate={navigate} onOpenBooking={openBooking} />
+              )}
             </motion.div>
           </AnimatePresence>
         </main>
